@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional de Jonathan Ariel Romero - Especialista en Soporte IT y Ciberseguridad">
+  <title>Jonathan Romero | Portafolio Profesional</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #e0f2f1;      /* Turquesa pastel muy suave */
+      --secondary-color: #f5f5f5;    /* Gris muy claro */
+      --accent-color: #4db6ac;       /* Turquesa medio para acentos */
+      --text-color: #37474f;         /* Azul grisáceo oscuro para texto */
+      --highlight-color: #80cbc4;    /* Turquesa suave para destacados */
+      --section-color: #f9f9f9;      /* Casi blanco para secciones */
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text-color);
+      background-color: var(--primary-color);
+      line-height: 1.6;
+    }
+    
+    .navbar {
+      background-color: var(--text-color);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-brand {
+      font-weight: 600;
+      color: var(--primary-color) !important;
+    }
+    
+    .nav-link {
+      color: var(--secondary-color) !important;
+      transition: color 0.3s;
+      margin-right: 15px;
+      font-weight: 500;
+    }
+    
+    .nav-link:hover {
+      color: var(--highlight-color) !important;
+    }
+    
+    .hero-section {
+      background-color: var(--secondary-color);
+      padding: 80px 0;
+      margin-bottom: 30px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .section-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+    
+    h1, h2, h3 {
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--highlight-color);
+      margin-top: 30px;
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      margin-top: 25px;
+    }
+    
+    .profile-pic {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid var(--accent-color);
+      margin-bottom: 20px;
+    }
+    
+    .skill-badge {
+      background-color: var(--highlight-color);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      display: inline-block;
+      margin: 5px;
+      font-weight: 500;
+    }
+    
+    .contact-icon {
+      margin-right: 10px;
+      color: var(--accent-color);
+      font-size: 1.2rem;
+    }
+    
+    .social-icon {
+      color: var(--accent-color);
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: transform 0.3s;
+    }
+    
+    .social-icon:hover {
+      transform: scale(1.2);
+    }
+    
+    .carousel {
+      margin: 30px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .carousel-inner img {
+      height: 400px;
+      object-fit: contain;
+      background-color: var(--section-color);
+    }
+    
+    footer {
+      background-color: var(--text-color);
+      color: var(--secondary-color);
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+    
+    .timeline:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 7px;
+      height: 100%;
+      width: 2px;
+      background-color: var(--highlight-color);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 30px;
+    }
+    
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      top: 5px;
+      left: -30px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Jonathan Romero</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre-mi">Sobre mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#formacion">Formación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#especializaciones">Especializaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#certificaciones">Certificaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#proximos-pasos">Próximos Pasos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección de héroe/inicio -->
+  <section class="hero-section" id="inicio">
+    <div class="container">
+      <img src="./Imagenes certificaciones/yo.jpg" alt="Jonathan Romero" class="profile-pic">
+      <h1>Jonathan Ariel Romero</h1>
+      <p class="lead">Especialista en Soporte IT & Ciberseguridad</p>
+      <div class="mt-4">
+        <span class="skill-badge">Soporte Técnico</span>
+        <span class="skill-badge">Ciberseguridad</span>
+        <span class="skill-badge">Administración de Sistemas</span>
+        <span class="skill-badge">Redes</span>
+        <span class="skill-badge">Linux</span>
+        <span class="skill-badge">Python</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="section-container">
+      <h2>Sobre mí</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            Soy un profesional de 26 años apasionado por las tecnologías de la información y la ciberseguridad. Mi historia personal es testimonio de perseverancia y superación: en 2015, tras superar una enfermedad grave que me dejó con una discapacidad motriz, logré rehabilitarme y retomar mi camino profesional con mayor determinación.
+          </p>
+          <p>
+            Mi formación en Soporte IT y Ciberseguridad, junto con mi capacidad para resolver problemas y adaptarme a nuevos desafíos, me posicionan como un candidato valioso para entornos tecnológicos que requieran profesionales comprometidos y resilientes.
+          </p>
+          <p>
+            En 2024, recibí una beca de Junior Achievement para estudiar Soporte IT, lo que me permitió consolidar mis conocimientos técnicos y descubrir nuevas áreas de especialización. Desde entonces, me he dedicado a la formación continua, ampliando mis competencias en ciberseguridad, sistemas operativos y tecnologías emergentes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Formación -->
+    <section id="formacion" class="section-container">
+      <h2>Formación y Especialidades</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Perfil Profesional</h3>
+          <p>
+            Gracias a mi formación, me considero capacitado para desempeñar funciones en dos áreas principales:
+          </p>
+          
+          <div class="card mb-4">
+            <div class="card-header bg-light">
+              <h4><i class="fas fa-laptop-code me-2"></i>Soporte Técnico</h4>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>Resolución de problemas de hardware y software</li>
+                <li>Instalación y configuración de equipos</li>
+                <li>Gestión de tickets de soporte</li>
+                <li>Implementación de nuevas tecnologías</li>
+                <li>Mantenimiento preventivo de sistemas</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header bg-light">
+              <h4><i class="fas fa-shield-alt me-2"></i>Ciberseguridad</h4>
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>Protección de sistemas contra amenazas y vulnerabilidades</li>
+                <li>Monitorización de redes y sistemas</li>
+                <li>Implementación de medidas de seguridad</li>
+                <li>Auditorías de ciberseguridad</li>
+                <li>Respuesta a incidentes de seguridad</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Especializaciones -->
+    <section id="especializaciones" class="section-container">
+      <h2>Especializaciones</h2>
+      
+      <h3>Soporte de Tecnologías de la Información</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Asistencia Técnica</h4>
+          <p>Enfoque en errores comunes de dispositivos, atención al cliente y conocimiento de los componentes básicos.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Redes</h4>
+          <p>Profundización en conceptos clave como DNS, DHCP, TCP/IP y el modelo OSI. Abordaje de temas de subredes, enmascaramiento de IP y configuración de módems, switches y routers.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Sistemas Operativos</h4>
+          <p>Manejo de GUI y CLI de Windows y el shell de Linux. Administración de permisos, controladores, formateo y partición de discos, conexión remota y solución de problemas de registro.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Administración de Sistemas</h4>
+          <p>Responsabilidades del SysAdmin, papel de los servidores DNS y DHCP, y herramientas como LDAP y Active Directory. Gestión de copias de seguridad.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Seguridad Informática</h4>
+          <p>Protección de datos, autenticación, autorización y medidas de seguridad en entornos empresariales para mitigar riesgos en la web.</p>
+        </div>
+      </div>
+      
+      <!-- Carrusel de certificaciones IT -->
+      <div id="carouselIT" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./Imagenes certificaciones/soporte de las tecnologias de informacion/asistencia tecnica.png" class="d-block w-100" alt="Certificado Asistencia Técnica">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/soporte de las tecnologias de informacion/redes.PNG" class="d-block w-100" alt="Certificado Redes">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/soporte de las tecnologias de informacion/Sistemas operativos.PNG" class="d-block w-100" alt="Certificado Sistemas Operativos">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/soporte de las tecnologias de informacion/Administracion de sistemas y servicios de TI.pdf - Personal_ Microsoft​ Edge 10_03_2025 20_33_20.PNG" class="d-block w-100" alt="Certificado Administración de Sistemas">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/soporte de las tecnologias de informacion/Defensa contra las artes negras.png" class="d-block w-100" alt="Certificado Defensa contra las artes negras">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/soporte de las tecnologias de informacion/especializacion soporte de las tecnologias de la info..PNG" class="d-block w-100" alt="Certificado Especialización Soporte IT">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/soporte de las tecnologias de informacion/Certificado Soporte IT - Jonathan Romero .PNG" class="d-block w-100" alt="Certificado Soporte IT">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIT" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselIT" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+      
+      <h3 class="mt-5">Google Cybersecurity</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h4>Fundamentos de la Ciberseguridad</h4>
+          <p>Conceptos clave como la protección de datos, las amenazas cibernéticas, las técnicas de defensa y las mejores prácticas para mantener la seguridad en entornos digitales.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Gestión de Riesgos de Seguridad</h4>
+          <p>Los 8 dominios de seguridad identificados por CISSP, implementación de controles para reducir riesgos, reconocimiento de ataques de ingeniería social y marco de seguridad NIST.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Seguridad en la Red</h4>
+          <p>Comprensión sólida de cómo gestionar y asegurar una red frente a amenazas, manteniendo la integridad y funcionamiento de la infraestructura tecnológica.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Herramientas del Oficio: Linux y SQL</h4>
+          <p>Uso de diferentes tipos de shell en Linux como Bash, Zsh y Fish, comandos esenciales y dominio de SQL para trabajar con bases de datos.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Recursos, Amenazas y Vulnerabilidades</h4>
+          <p>Implementación de controles técnicos y operativos, principio de mínimo privilegio, supervisión constante, MFA, identificación de vulnerabilidades y uso de listas como CVE y recursos como OWASP.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Detección y Respuesta</h4>
+          <p>Uso de herramientas como HIDS y NIDS, comprensión de IoC (Indicadores de Compromiso) e interpretación correcta de alertas para evitar falsos positivos.</p>
+        </div>
+        
+        <div class="timeline-item">
+          <h4>Automatización con Python</h4>
+          <p>Automatización de tareas repetitivas mediante programación en Python, mejorando la eficiencia en el trabajo de ciberseguridad.</p>
+        </div>
+      </div>
+      
+      <!-- Carrusel de certificaciones Ciberseguridad -->
+      <div id="carouselCyber" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/Fundamentos de la ciberseguridad.PNG" class="d-block w-100" alt="Fundamentos de la Ciberseguridad">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/Juegue seguro control de riesgos.PNG" class="d-block w-100" alt="Control de Riesgos">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/Seguridad de la red.PNG" class="d-block w-100" alt="Seguridad de la Red">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/Herramientas de oficio Linux y SQL.PNG" class="d-block w-100" alt="Linux y SQL">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/recursos amenazas y vulnerabilidades.PNG" class="d-block w-100" alt="Recursos, Amenazas y Vulnerabilidades">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/Haga sonar la alarma deteccion y respuesta.PNG" class="d-block w-100" alt="Detección y Respuesta">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/Automatizar tareas con Python.pdf - Personal_ Microsoft​ Edge 11_03_2025 1_10_28.PNG" class="d-block w-100" alt="Automatizar tareas con Python">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/Pongalo en practica.PNG" class="d-block w-100" alt="Póngalo en práctica">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Google Cybersecurity/Google Cybersecurity.pdf y 1 página más - Personal_ Microsoft​ Edge 11_03_2025 1_15_05.PNG" class="d-block w-100" alt="Certificado Google Cybersecurity">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCyber" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselCyber" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+    
+    <!-- Sección Certificaciones Adicionales -->
+    <section id="certificaciones" class="section-container">
+      <h2>Certificaciones Adicionales</h2>
+      <p>A lo largo de estos años, he ampliado mi formación con diversos cursos en seguridad y programación.</p>
+      
+      <!-- Carrusel de otras certificaciones -->
+      <div id="carouselOtros" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./Imagenes certificaciones/Otros/certificado USACH.PNG" class="d-block w-100" alt="Certificado USACH">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Otros/Seguridad en terminales Cisco.PNG" class="d-block w-100" alt="Seguridad en terminales Cisco">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Otros/Certificado-Python-para-no-programadores-EducaciónIT.png" class="d-block w-100" alt="Python para no programadores">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Otros/Introduccion Ciberseguridad Cisco.PNG" class="d-block w-100" alt="Introducción Ciberseguridad Cisco">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Otros/Secundario.jpg" class="d-block w-100" alt="Certificado Secundario">
+          </div>
+          <div class="carousel-item">
+            <img src="./Imagenes certificaciones/Otros/Certificado Yo puedo programar - Jonathan Romero.pdf y 2 páginas más - Personal_ Microsoft​ Edge 16_03_2025 0_19_53.PNG" class="d-block w-100" alt="Certificado Yo puedo programar">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselOtros" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselOtros" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+    
+    <!-- Sección Próximos Pasos -->
+    <section id="proximos-pasos" class="section-container">
+      <h2>Próximos Pasos y Actualidad</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card mb-4">
+            <div class="card-header bg-light">
+              <h4><i class="fas fa-briefcase me-2"></i>Objetivos Profesionales</h4>
+            </div>
+            <div class="card-body">
+              <p>
+                Mi objetivo inmediato es conseguir un trabajo remoto en el área de IT o ciberseguridad. Una vez alcanzado, continuaré ampliando mis conocimientos y explorando nuevas áreas tecnológicas.
+              </p>
+            </div>
+          </div>
+          
+          <div class="card">
+            <div class="card-header bg-light">
+              <h4><i class="fas fa-graduation-cap me-2"></i>Formación Actual</h4>
+            </div>
+            <div class="card-body">
+              <p>Actualmente me encuentro realizando:</p>
+              <ul>
+                <li><strong>Curso de inglés</strong> a través de English Discoveries y el gobierno de la Ciudad</li>
+                <li><strong>Hacking ético</strong> mediante la plataforma de Cisco, para profundizar en pruebas de penetración</li>
+                <li><strong>Programación en Python</strong> - iniciaré el 24 de marzo un curso avanzado gracias al gobierno de la Ciudad</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section-container">
+      <h2>Contacto</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="mb-4">
+            <p><i class="fas fa-phone contact-icon"></i> <strong>Teléfono:</strong> 14-3376-1333</p>
+            <p><i class="fas fa-envelope contact-icon"></i> <strong>Correo:</strong> romerojonathanariel98@gmail.com</p>
+          </div>
+          
+          <div class="social-links text-center">
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jonathan Ariel Romero - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

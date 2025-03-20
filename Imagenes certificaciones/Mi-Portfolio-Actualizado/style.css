@@ -1,0 +1,111 @@
+img{
+width: 30%;
+height: auto;
+}
+
+#carouselExampleFade {
+width: 800px;
+margin: auto;
+}
+
+#carouselExampleFade2{
+width: 800px;
+margin: auto;
+}
+    
+#carouselExampleFade3{
+width: 800px;
+margin: auto;
+}
+
+li {
+    list-style: none;
+    font-size: 20px;
+    margin: 0px 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+ul{
+    
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    padding-right: 10px;
+}
+
+body{
+    background-color: aqua;
+
+    
+}
+
+h1{
+    justify-content: center;
+}
+
+/* Estilos adicionales que se pueden colocar en un archivo style.css separado */
+
+/* Efecto de hover en las tarjetas */
+.card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animación para la imagen de perfil */
+.profile-pic {
+  transition: transform 0.5s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Mejora en la visualización de las badges de habilidades */
+.skill-badge {
+  transition: all 0.3s;
+}
+
+.skill-badge:hover {
+  background-color: #26a69a;
+  transform: scale(1.05);
+}
+
+/* Mejorar la visibilidad de la línea de tiempo */
+.timeline-item {
+  transition: transform 0.3s;
+}
+
+.timeline-item:hover {
+  transform: translateX(5px);
+}
+
+.timeline-item:hover:before {
+  background-color: #26a69a;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 50px 0;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .section-container {
+    padding: 20px;
+  }
+  
+  .timeline:before {
+    left: 5px;
